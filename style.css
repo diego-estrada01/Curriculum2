@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg1: #0f172a;
+    --bg2: #020617;
+    --glass: rgba(255,255,255,0.08);
+    --border: rgba(255,255,255,0.15);
+    --text: #e5e7eb;
+    --accent: #38bdf8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* Fondo moderno */
+.background {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, #38bdf820, transparent 40%),
+        radial-gradient(circle at 80% 30%, #6366f120, transparent 40%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+    z-index: -1;
+}
+
+/* Contenedor */
+.cv {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 30px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.hero img {
+    width: 140px;
+    height: 140px;
+    border-radius: 28px;
+    object-fit: cover;
+    border: 2px solid var(--border);
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.rol {
+    color: var(--accent);
+    margin: 6px 0;
+}
+
+.bio {
+    max-width: 500px;
+    opacity: 0.85;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+/* GLASS CARDS */
+.glass {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+    border-radius: 24px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: #020617;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* TIMELINE */
+.timeline div {
+    margin-bottom: 15px;
+}
+
+.timeline small {
+    display: block;
+    opacity: 0.6;
+    margin: 4px 0;
+}
